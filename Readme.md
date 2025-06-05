@@ -1,0 +1,1 @@
+These are notes for C. I have not done much yet. However, after I get a grasp of the Language, I will start creating my compiler.
