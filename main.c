@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h> // using this makes you able to use special functions related to math liek the below function
+#include <stdlib.h>
 
 void userinput() {
     int input;
@@ -45,6 +46,32 @@ int add(int a, int b) {
     return a + b;
 }
 
+void Dynamic_Array() {
+    //create a pointer of the type you want
+    int* ptr;
+    //have a size to set it by default
+    int size = 10;
+
+    //assign the size using type and malloc
+    ptr = (int*)malloc(size * sizeof(int));
+
+    //checks if it returns null cause it sometimes does if there is an issue
+    if (ptr == NULL) {
+        fprintf(stderr, "Memory allocation failed\n");
+    }else {
+        printf("Memory successfully allocated using "
+               "malloc.\n");
+        //assigns values to the array
+        for (int i = 0; i < size; i++) {
+            ptr[i] = i +1;
+        }
+        //prints the values to the array
+        printf("The elements of the array are: ");
+        for (int i = 0; i < size; i++) {
+            printf("%d, ", ptr[i]);
+        }
+    }
+}
 
 //arrays
 void arrs() {
